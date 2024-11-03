@@ -65,7 +65,7 @@ def api(ip_address):
             "[*] currency": data.get('currency', 'N/A'),  
             "[*] language": data.get('language', 'N/A'),  
             "[*] status": data.get('status', 'N/A'),
-            "[*] Map": f"https://www.google.com/maps/search/?api=1&query={latitude},{longitude}"  
+            "[*] Map": f"https://www.openstreetmap.org/#map=7/{latitude}/{longitude}"
         }
 
         print(TextColors.LIGHT_MAGENTA +"╔════════════════════════════════════════════════════════════════════╗")

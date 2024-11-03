@@ -37,13 +37,16 @@ def ip_information():
     
     ip = input(TextColors.MAGENTA + "IP > "+ TextColors.RESET)
     api(ip)
-    
+
 def api(ip_address):
     response = requests.get(f'http://ip-api.com/json/{ip_address}')
     
     if response.status_code == 200:
         data = response.json()
         
+        latitude = data.get('lat', 'N/A')
+        longitude = data.get('lon', 'N/A')
+
         output = {
             "[+] IP": data.get('query', 'N/A'), 
             "[+] continent_code": data.get('continent', 'N/A'),
@@ -54,14 +57,15 @@ def api(ip_address):
             "[*] region_name": data.get('regionName', 'N/A'),
             "[*] city": data.get('city', 'N/A'),
             "[*] zip": data.get('zip', 'N/A'),
-            "[*] latitude": data.get('lat', 'N/A'),
-            "[*] longitude": data.get('lon', 'N/A'),
+            "[*] latitude": latitude,
+            "[*] longitude": longitude,
             "[*] ISP": data.get('isp', 'N/A'),
             "[*] timezone": data.get('timezone', 'N/A'),
             "[*] country capital": data.get('capital', 'N/A'),  
             "[*] currency": data.get('currency', 'N/A'),  
             "[*] language": data.get('language', 'N/A'),  
-            "[*] status": data.get('status', 'N/A'), 
+            "[*] status": data.get('status', 'N/A'),
+            "[*] Map": f"https://www.google.com/maps/search/?api=1&query={latitude},{longitude}"  # 구글 지도 링크
         }
 
         print(TextColors.LIGHT_MAGENTA +"╔════════════════════════════════════════════════════════════════════╗")

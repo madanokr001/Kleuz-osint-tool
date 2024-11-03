@@ -51,7 +51,7 @@ def dnsreverse():
 
           IP Address : {ip}
 
-          Domain server : {addr}
+          Domain : {addr}
                 
     ══════════════════════════════════════════════════"""+ TextColors.RESET)
 

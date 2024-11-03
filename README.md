@@ -20,6 +20,7 @@
 # HOW TO USE ❓
 ```
 pip install python-whois
+pip install geopy
 ```
 ```
 git clone

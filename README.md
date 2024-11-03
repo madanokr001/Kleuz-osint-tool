@@ -1,4 +1,4 @@
-# WHAT IS Kleuz 🔥
+# Kleuz - OSINT Tool 🔥
 **Kleuz is a powerful OSINT tool designed for information lookup and social media profile finding.**
 
 - **version 1.0**

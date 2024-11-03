@@ -19,6 +19,9 @@
 
 # HOW TO USE ❓
 ```
+pip install python-whois
+```
+```
 git clone
 ```
 ```

@@ -68,7 +68,7 @@ def number_information():
     input()
 
 def phone_location(location):
-    geolocator = Nominatim(user_agent="my_geocoder_app")  # User-Agent 추가
+    geolocator = Nominatim(user_agent="my_geocoder_app") 
     
     location_info = geolocator.geocode(location)
         

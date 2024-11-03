@@ -41,20 +41,20 @@ def number_information():
     latitude, longitude = phone_location(location)
 
     output = {
-        
-        "Valid": phonenumbers.is_valid_number(number_info),
-        "Possible": phonenumbers.is_possible_number(number_info),
-        "Number": phonenumbers.format_number(number_info, phonenumbers.PhoneNumberFormat.E164),
-        "Location": location,
-        "Carrier": carrier.name_for_number(number_info, "en") if carrier.name_for_number(number_info, "en") else 'Unknown',
-        "Country Code": number_info.country_code,
-        "Region Code": region_code if region_code else 'Unknown',
-        "Country Name": geocoder.country_name_for_number(number_info, 'en') if geocoder.country_name_for_number(number_info, 'en') else 'Unknown',
-        "Latitude": latitude,
-        "Longitude": longitude,
-        "Phone Type": phone_type(number_info),
-        "Is Active": "Yes" if phonenumbers.is_valid_number(number_info) else "No",
-        "Map": f"https://www.google.com/maps/search/?api=1&query={latitude},{longitude}",
+
+        "[+] Valid": phonenumbers.is_valid_number(number_info),
+        "[+] Possible": phonenumbers.is_possible_number(number_info),
+        "[+] Number": phonenumbers.format_number(number_info, phonenumbers.PhoneNumberFormat.E164),
+        "[+] Location": location,
+        "[+] Carrier": carrier.name_for_number(number_info, "en") if carrier.name_for_number(number_info, "en") else 'Unknown',
+        "[+] Country Code": number_info.country_code,
+        "[+] Region Code": region_code if region_code else 'Unknown',
+        "[+] Country Name": geocoder.country_name_for_number(number_info, 'en') if geocoder.country_name_for_number(number_info, 'en') else 'Unknown',
+        "[*] Latitude": latitude,
+        "[*] Longitude": longitude,
+        "[+] Phone Type": phone_type(number_info),
+        "[+] Is Active": "Yes" if phonenumbers.is_valid_number(number_info) else "No",
+        "[*] Map": f"https://www.openstreetmap.org/#map=7/{latitude}/{longitude}"
     }
 
     print(TextColors.LIGHT_MAGENTA + "╔════════════════════════════════════════════════════════════════════╗")
@@ -68,7 +68,7 @@ def number_information():
     input()
 
 def phone_location(location):
-    geolocator = Nominatim(user_agent="my_geocoder_app") 
+    geolocator = Nominatim(user_agent="my_geocoder_app")  # User-Agent 추가
     
     location_info = geolocator.geocode(location)
         

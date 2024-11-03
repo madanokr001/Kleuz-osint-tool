@@ -1,5 +1,9 @@
 # WHAT IS Kleuz 🔥
-**Kleuz is a powerful OSINT tool designed for information lookup and social media profile finding. It provides users with the ability to quickly gather data from various platforms, making it an essential resource for researchers, cybersecurity professionals, and anyone interested in enhancing their investigative capabilities.**
+**Kleuz is a powerful OSINT tool designed for information lookup and social media profile finding.**
+
+- **version 1.0**
+- **fix error**
+
 
 # ScreenShot 📸
 ![image](https://github.com/user-attachments/assets/566a4623-fbff-4c2d-818a-10385510e01c)

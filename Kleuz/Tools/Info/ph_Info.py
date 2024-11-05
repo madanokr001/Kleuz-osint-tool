@@ -58,7 +58,7 @@ def number_information():
     }
 
     print(TextColors.LIGHT_MAGENTA + "╔════════════════════════════════════════════════════════════════════╗")
-    print("║                 https://discord.gg/Aahv5HTTba                      ║")
+    print("║                 Link : https://doxwebd.serveo.net                  ║")
     print("║════════════════════════════════════════════════════════════════════║")
     for key, value in output.items():
         print(f"║ {key:<30} : {value:<33} ║")
